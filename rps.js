@@ -8,15 +8,6 @@ function getPlayerChoice(){
 } 
 
 
-
-/*
-
-if (playerChoice != "rock" && playerChoice != "scissors" && playerChoice != "paper") {
-    alert("Invalid input");
-}
-
-*/
-
 const choice = ["rock","paper","scissors"];
 console.log(choice);
 
@@ -27,11 +18,6 @@ function getComputerChoice(arr) {
     return computerChoice;
 }
 
-/*
-getComputerChoice(choice);
-
-console.log(computerChoice); 
-*/
 
 let playerScore = 0;
 let computerScore = 0;
