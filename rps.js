@@ -82,9 +82,12 @@ function declareWinner() {
     }
 }
 
-function game(){
+function playGame(){
     while (playerScore < 5 && computerScore < 5){
         getPlayerChoice();
+        if (playerChoice != "rock" && playerChoice != "scissors" && playerChoice != "paper") {
+            alert("Invalid input");
+        }
         getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
         
@@ -93,5 +96,5 @@ function game(){
 
 }
 
-game();
+playGame();
 
