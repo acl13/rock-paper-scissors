@@ -1,7 +1,15 @@
 
-const input = prompt("Rock, Paper, or Scissors?");
-const playerChoice = input.toLowerCase();
-console.log(playerChoice);
+
+let playerChoice
+
+function getPlayerChoice(){
+    const input = prompt("Rock, Paper, or Scissors?");
+    playerChoice = input.toLowerCase();
+    console.log(playerChoice);
+} 
+
+
+
 
 /*
 
@@ -65,6 +73,13 @@ function playRound(playerChoice, computerChoice){
     }
 }
 
-playRound(playerChoice, computerChoice);
+function game(){
+    while (playerScore < 5 && computerScore < 5){
+        getPlayerChoice();
+        playRound(playerChoice, computerChoice);
+    }
 
+}
+
+game();
 
