@@ -1,5 +1,4 @@
 
-
 let playerChoice
 
 function getPlayerChoice(){
@@ -7,7 +6,6 @@ function getPlayerChoice(){
     playerChoice = input.toLowerCase();
     console.log(playerChoice);
 } 
-
 
 
 
@@ -29,9 +27,11 @@ function getComputerChoice(arr) {
     return computerChoice;
 }
 
+/*
 getComputerChoice(choice);
 
 console.log(computerChoice); 
+*/
 
 let playerScore = 0;
 let computerScore = 0;
@@ -73,11 +73,23 @@ function playRound(playerChoice, computerChoice){
     }
 }
 
+function declareWinner() {
+    if(computerScore === 5) {
+        console.log("The computer won! Try again!");
+    }
+    else if(playerScore === 5) {
+        console.log("Hooray! You beat the computer!");
+    }
+}
+
 function game(){
     while (playerScore < 5 && computerScore < 5){
         getPlayerChoice();
+        getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
+        
     }
+    declareWinner();
 
 }
 
