@@ -1,3 +1,28 @@
+let playerChoice
+
+function getPlayerChoice(){
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+    playerChoice = "rock";
+    console.log(playerChoice);
+    playRound(playerChoice, computerChoice);
+});
+
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", () => {
+    let playerChoice = "paper";
+    console.log(playerChoice);
+    playRound(playerChoice, computerChoice);
+});
+
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener("click", () => {
+    let playerChoice = "scissors";
+    console.log(playerChoice);
+    playRound(playerChoice, computerChoice);
+});
+}
+/*
 
 let playerChoice
 
@@ -7,6 +32,7 @@ function getPlayerChoice(){
     console.log(playerChoice);
 } 
 
+*/ 
 
 const choice = ["rock","paper","scissors"];
 console.log(choice);
@@ -24,6 +50,7 @@ let computerScore = 0;
 
 
 function playRound(playerChoice, computerChoice){
+    getComputerChoice(choice);
     if(playerChoice === computerChoice) {
         console.log("It's a tie!")
     }  
@@ -59,6 +86,9 @@ function playRound(playerChoice, computerChoice){
     }
 }
 
+
+
+/*
 function declareWinner() {
     if(computerScore === 5) {
         console.log("The computer won! Try again!");
@@ -84,3 +114,4 @@ function playGame(){
 
 playGame();
 
+*/
