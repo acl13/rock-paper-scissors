@@ -15,7 +15,8 @@ let computerScore = 0;
 const p1 = document.querySelector("#player");
 const p2 = document.querySelector("#computer");
 const comments = document.querySelector(".comments");
-
+const gameOver = document.querySelector(".end");
+const refresh = document.querySelector(".refresh");
 
 
 function playRound(playerChoice, computerChoice){
@@ -27,7 +28,7 @@ function playRound(playerChoice, computerChoice){
         playerScore += 1;
         p1.textContent = playerScore;
         if (playerScore === 5) {
-            comments.textContent = "Game Over";
+            declareWinner();
         } else {
         return playerScore;
         }
@@ -38,7 +39,7 @@ function playRound(playerChoice, computerChoice){
         playerScore += 1;
         p1.textContent = playerScore;
         if (playerScore === 5) {
-            comments.textContent = "Game Over";
+            declareWinner();
         } else {
         return playerScore;
         }
@@ -49,7 +50,7 @@ function playRound(playerChoice, computerChoice){
         playerScore += 1;
         p1.textContent = playerScore;
         if (playerScore === 5) {
-            comments.textContent = "Game Over";
+            declareWinner();
         } else {
         return playerScore;
         }
@@ -60,7 +61,7 @@ function playRound(playerChoice, computerChoice){
         computerScore += 1;
         p2.textContent = computerScore;
         if (computerScore === 5) {
-            comments.textContent = "Game Over";
+            declareWinner();
         } else {
         return computerScore;
         }
@@ -70,7 +71,7 @@ function playRound(playerChoice, computerChoice){
         computerScore += 1;
         p2.textContent = computerScore;
         if (computerScore === 5) {
-            comments.textContent = "Game Over";
+            declareWinner();
         } else {
         return computerScore;
         }
@@ -81,7 +82,7 @@ function playRound(playerChoice, computerChoice){
         computerScore += 1;
         p2.textContent = computerScore;
         if (computerScore === 5) {
-            comments.textContent = "Game Over";
+            declareWinner();
         } else {
         return computerScore;
         }
@@ -93,16 +94,20 @@ function playRound(playerChoice, computerChoice){
     
 
 function declareWinner() {
+gameOver.textContent = "Game Over";
+refresh.textContent = "Please refresh the page to play again."
+document.removeEventListener("click", function(event) {});
     if(computerScore > playerScore) {
-        console.log("The computer won! Try again!");
+        comments.textContent = "The computer won! Try again!";
     }
     else if(playerScore > computerScore) {
-        console.log("Hooray! You beat the computer!");
+        comments.textContent = "Hooray! You beat the computer!";
     }
     else {
         console.log("whoops");
     }
 }
+
 
 
 let playerChoice;
