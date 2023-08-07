@@ -116,14 +116,17 @@ document.addEventListener("click", choose);
 function choose(event) {
     if (event.target.matches('#rock')){
         playerChoice = "rock";
+        console.log(playerChoice);
         getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
     } else if(event.target.matches("#scissors")) {
         playerChoice = "scissors"
+        console.log(playerChoice);
         getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
     } else if(event.target.matches("#paper")) {
         playerChoice = "paper"
+        console.log(playerChoice);
         getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
     }
