@@ -3,20 +3,22 @@ let computerChoice
 const choice = ["rock","paper","scissors"];
 console.log(choice);
 
+const p1 = document.querySelector("#player");
+const p2 = document.querySelector("#computer");
+const comments = document.querySelector(".comments");
+const gameOver = document.querySelector(".end");
+const refresh = document.querySelector(".refresh");
+const displayChoice = document.querySelector(".choice");
 
 function getComputerChoice(arr) {
     computerChoice = arr[Math.floor(Math.random() * arr.length)];
+    displayChoice.textContent = ("The computer chooses " + computerChoice + ".");
     return computerChoice;
 }
 
 let playerScore = 0;
 let computerScore = 0;
 
-const p1 = document.querySelector("#player");
-const p2 = document.querySelector("#computer");
-const comments = document.querySelector(".comments");
-const gameOver = document.querySelector(".end");
-const refresh = document.querySelector(".refresh");
 
 
 function playRound(playerChoice, computerChoice){
