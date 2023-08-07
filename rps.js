@@ -14,73 +14,74 @@ let computerScore = 0;
 
 const p1 = document.querySelector("#player");
 const p2 = document.querySelector("#computer");
+const comments = document.querySelector(".comments");
 
 
 
 function playRound(playerChoice, computerChoice){
     if(playerChoice === computerChoice) {
-        console.log("It's a tie!")
+        comments.textContent = "It's a tie!";
     }  
     else if(playerChoice === "rock" && computerChoice === "scissors") {
-        console.log("You win! Rock beats scissors.");
+        comments.textContent = "You win! Rock beats scissors.";
         playerScore += 1;
         p1.textContent = playerScore;
         if (playerScore === 5) {
-            console.log("Game Over");
+            comments.textContent = "Game Over";
         } else {
         return playerScore;
         }
         
     }
     else if(playerChoice === "paper" && computerChoice === "rock") {
-        console.log("You win! Paper beats rock.")
+        comments.textContent = "You win! Paper beats rock."
         playerScore += 1;
         p1.textContent = playerScore;
         if (playerScore === 5) {
-            console.log("Game Over");
+            comments.textContent = "Game Over";
         } else {
         return playerScore;
         }
         
     }
     else if(playerChoice === "scissors" && computerChoice === "paper") {
-        console.log("You win! Scissors beats paper.")
+        comments.textContent = "You win! Scissors beats paper."
         playerScore += 1;
         p1.textContent = playerScore;
         if (playerScore === 5) {
-            console.log("Game Over");
+            comments.textContent = "Game Over";
         } else {
         return playerScore;
         }
         
     }
     else if(playerChoice === "rock" && computerChoice === "paper") {
-        console.log("You lose! Paper beats rock.")
+        comments.textContent = "You lose! Paper beats rock."
         computerScore += 1;
         p2.textContent = computerScore;
         if (computerScore === 5) {
-            console.log("Game Over");
+            comments.textContent = "Game Over";
         } else {
         return computerScore;
         }
     }
     else if(playerChoice === "paper" && computerChoice === "scissors") {
-        console.log("You lose! Scissors beats paper.")
+        comments.textContent = "You lose! Scissors beats paper."
         computerScore += 1;
         p2.textContent = computerScore;
         if (computerScore === 5) {
-            console.log("Game Over");
+            comments.textContent = "Game Over";
         } else {
         return computerScore;
         }
         
     }
     else if(playerChoice === "scissors" && computerChoice === "rock") {
-        console.log("You lose! Rock beats scissors.");
+        comments.textContent = "You lose! Rock beats scissors.";
         computerScore += 1;
         p2.textContent = computerScore;
         if (computerScore === 5) {
-            console.log("Game Over");
+            comments.textContent = "Game Over";
         } else {
         return computerScore;
         }
