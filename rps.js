@@ -86,9 +86,7 @@ function playRound(playerChoice, computerChoice){
         } else {
         return computerScore;
         }
-    } else {
-        console.log("whoops, something went wrong...")
-    }
+    } 
 } 
 
     
@@ -102,9 +100,6 @@ document.removeEventListener("click", choose);
     }
     else if(playerScore > computerScore) {
         comments.textContent = "Hooray! You beat the computer!";
-    }
-    else {
-        console.log("whoops");
     }
 }
 
@@ -121,17 +116,14 @@ document.addEventListener("click", choose);
 function choose(event) {
     if (event.target.matches('#rock')){
         playerChoice = "rock";
-        console.log(playerChoice);
         getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
     } else if(event.target.matches("#scissors")) {
         playerChoice = "scissors"
-        console.log(playerChoice);
         getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
     } else if(event.target.matches("#paper")) {
         playerChoice = "paper"
-        console.log(playerChoice);
         getComputerChoice(choice);
         playRound(playerChoice, computerChoice);
     }
