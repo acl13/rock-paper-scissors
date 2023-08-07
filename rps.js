@@ -96,7 +96,7 @@ function playRound(playerChoice, computerChoice){
 function declareWinner() {
 gameOver.textContent = "Game Over";
 refresh.textContent = "Please refresh the page to play again."
-document.removeEventListener("click", function(event) {});
+document.removeEventListener("click", choose);
     if(computerScore > playerScore) {
         comments.textContent = "The computer won! Try again!";
     }
@@ -117,7 +117,8 @@ const paper = document.querySelector("#paper");
 const scissors = document.querySelector("#scissors");
 
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", choose);
+function choose(event) {
     if (event.target.matches('#rock')){
         playerChoice = "rock";
         console.log(playerChoice);
@@ -135,7 +136,7 @@ document.addEventListener("click", function(event) {
         playRound(playerChoice, computerChoice);
     }
 
-    });
+    };
 
   
 
