@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    font-family: "DotGothic16";
+    font-weight: bold;
+    background-color: #012a33;
+    color: #f7fcfc;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+   
+}
