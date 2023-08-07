@@ -8,7 +8,28 @@ body {
 
 button {
     height: 100px;
-    width: 100px;
-    margin-bottom: 20px;
+    width: 120px;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #274a4a;
+    color: #f7fcfc;
+    border: 5px solid #b8c2c2;
    
 }
+
+/*
+
+h1 {
+    margin-top: 50px;
+}
+
+div {
+    font-size: 22px;
+}
+
+.choice {
+    margin: 20px auto;
+}
+
+*/
