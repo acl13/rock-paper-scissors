@@ -4,13 +4,17 @@ body {
     font-weight: bold;
     background-color: #012a33;
     color: #f7fcfc;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 button {
-    height: 100px;
-    width: 120px;
+    height: 150px;
+    width: 150px;
     margin: 20px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     background-color: #274a4a;
     color: #f7fcfc;
@@ -21,14 +25,22 @@ button {
 
 
 h1 {
-    margin-top: 50px;
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 div {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .choice {
     margin: 20px auto;
 }
 
+.buttons {
+    display: flex;
+    margin: 10px auto;
+}
