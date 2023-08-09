@@ -44,3 +44,7 @@ div {
     display: flex;
     margin: 10px auto;
 }
+
+.hover {
+    border: 5px solid #fae55f;
+}

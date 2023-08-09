@@ -135,7 +135,30 @@ function choose(event) {
 
     };
 
+ 
+document.addEventListener("mouseover", hover);
+function hover(event){
+    if(event.target.matches("#rock")) {
+        rock.classList.add("hover");
+    } else if(event.target.matches("#paper")) {
+        paper.classList.add("hover");
+    }else if(event.target.matches("#scissors")) {
+        scissors.classList.add("hover");
+    }
+}
+
   
+document.addEventListener("mouseout", remove);
+function remove(event){
+    if(event.target.matches("#rock")) {
+        rock.classList.remove("hover");
+    } else if(event.target.matches("#paper")) {
+        paper.classList.remove("hover");
+    }else if(event.target.matches("#scissors")) {
+        scissors.classList.remove("hover");
+    }
+}
+
 
 
 
